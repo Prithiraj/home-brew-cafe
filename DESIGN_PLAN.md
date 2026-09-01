@@ -1,195 +1,376 @@
-# Skip to My Brew — Futuristic Website Plan
+# Skip to My Brew — Classic, Familiar, and Quietly Futuristic Redesign Plan
 
-**Working concept:** `BREW/OS — Coffee for this timeline`  
-**Business:** Skip to My Brew, 145 Valley Road, Montclair, New Jersey  
-**Delivery target:** Fast, accessible static site hosted on GitHub Pages  
-**Research lock date:** September 1, 2026
+**Plan version:** 2.0  
+**Working concept:** **The Familiar Ritual**  
+**Design statement:** A warm, recognizable neighborhood coffeehouse presented with classic editorial elegance; Three.js adds atmosphere and depth rather than a game interface.  
+**Status:** Implemented on the `redesign/classic-elegant-threejs` branch.
 
-## 1. Evidence baseline
+## 1. Why the current hero feels game-like
 
-The website must feel imaginative, but its factual content must remain grounded. The implementation uses the following public evidence:
+The current hero is technically strong, but several choices combine into a game/control-panel impression:
 
-| Verified signal | Design/content implication | Source |
-|---|---|---|
-| The official Instagram profile lists **145 Valley Road**, **Tuesday–Sunday, 8 AM–4 PM**, free Wi-Fi, and call-in pickup. | Put hours, directions, Wi-Fi, and call-to-order above the fold. Do not claim online ordering. | [Official Instagram profile](https://www.instagram.com/skip_to_my_brew/) |
-| Local opening coverage describes pastel/spring colors, booths, high-top seating, books, espresso drinks, teas, pastries, and sweet-foam lattes. | Base the palette on powder blue, custard, coral, and espresso; present the café as a place to stay, not only transact. | [The Montclair Girl opening coverage](https://www.themontclairgirl.com/skip-to-my-brew-coffee-montclair-nj/) |
-| The menu has included Americano, cortado, cappuccino, flavored espresso drinks, ube/caramel/strawberry sweet-foam lattes, named teas, croissants, cookies, macarons, and cupcakes. | Show a representative, price-free menu architecture and clearly label seasonal/rotating items. | [The Montclair Girl café guide](https://www.themontclairgirl.com/best-montclair-coffee-shops/) |
-| A venue guide describes Fallout-inspired details, board games, comfortable booths, mouse doors, bear handles, and cold brew served with coffee ice cubes. | Build a subtle game-interface narrative and make “coffee ice cubes” a memorable product story. Avoid copying protected Fallout art, names, or logos. | [Corner venue guide](https://www.corner.inc/place/pPoJKx4ABRLn) |
-| A 2026 local guide includes the café as a place to play board games. | Give board games a dedicated experience card and reason-to-visit role. | [Montclair board-game guide](https://www.themontclairgirl.com/tabletop-board-game-spots-montclair-essex-county-nj/) |
-| The official feed has promoted seasonal drinks, including a Blueberry Pancake Latte. | Treat limited drinks as “seasonal signals” and send visitors to Instagram for today’s availability. | [Official Instagram profile](https://www.instagram.com/skip_to_my_brew/) |
+- A large fully synthetic 3D cup is the dominant visual.
+- Neon orbital rings, particles, and black space suggest a game object or power-up.
+- Labels such as “Brew Reactor,” “Online,” “Signal,” “Protocol,” and “Plot a course” create a HUD vocabulary.
+- Monospaced type, scan lines, glowing borders, and status panels reinforce the interface metaphor.
+- The real café and its tactile qualities appear later, so the first impression is digital rather than hospitable.
 
-### Content guardrails
+The redesign will keep the technical sophistication but move it below the surface.
 
-- Do not publish prices until the owner supplies a current menu.
-- Do not freeze a Google star rating or review count into the UI; those change.
-- Do not claim delivery, reservations, catering, loyalty rewards, or late hours without confirmation.
-- Present menu items as representative and include “availability rotates.”
-- The prototype references public editorial/venue imagery with visible attribution. Before commercial launch, replace those files with owner-supplied originals or obtain written usage permission.
+## 2. New creative direction: The Familiar Ritual
 
-## 2. Strategic goal
+The guiding idea is:
 
-Turn a search or social visitor into an in-person visit with minimal friction while making the brand memorable enough to revisit directly.
+> **A real cup, a real room, and a little impossible atmosphere.**
 
-### Primary conversions
+The site should feel familiar in the first two seconds: coffee, warmth, daylight, wood, ceramic, people, and a neighborhood storefront. The futuristic layer should be discovered through subtle motion, depth, light, and steam—not announced through sci-fi vocabulary.
 
-1. Open Google Maps directions.
-2. Call for pickup.
-3. Check hours/status.
-4. Explore representative drinks and café features.
-5. Follow the official Instagram feed for current specials.
+### Design balance
 
-### Secondary outcomes
-
-- Establish a distinctive identity that is different from a generic pastel café.
-- Communicate “stay awhile”: Wi-Fi, books, booths, and board games.
-- Create a platform that can later accept a real menu, ordering link, loyalty system, events, and owner photography.
-
-## 3. Audience
-
-### Remote workers and students
-
-Need immediate proof of Wi-Fi, seating, hours, and a comfortable stay. The site uses a live local open/closed indicator and surfaces free Wi-Fi early.
-
-### Local regulars
-
-Need seasonal drops, pickup access, and quick directions. Calls to action remain fixed and thumb-friendly on mobile.
-
-### Experience seekers and gamers
-
-Need a reason this café is worth a special trip. The game-interface language, board-game card, lore-like details, and 3D “brew reactor” provide that hook without using another franchise’s intellectual property.
-
-### Coffee explorers
-
-Need credible menu signals. The site groups classic espresso, sweet-foam drinks, teas, pastries, and rotating experiments without fabricating a full menu.
-
-## 4. Creative direction: BREW/OS
-
-A warm neighborhood café interpreted through the interface of an optimistic future. It should feel like a friendly control room discovered behind a pastel storefront—not a cyberpunk nightclub.
-
-### Brand language
-
-- **Headline:** Coffee for this timeline.
-- **Support:** Seasonal lattes, coffee ice cubes, board games, books, booths, and free Wi-Fi in Montclair.
-- **Interface vocabulary:** signal, protocol, archive, reactor, coordinates, current transmission.
-- **Tone:** curious, welcoming, slightly playful, never cryptic enough to hurt usability.
-
-### Visual system
-
-| Token | Use |
+| Quality | How it will appear |
 |---|---|
-| Espresso `#130f14` | Main background and high-contrast foundation |
-| Cream `#fff8e8` | Primary text and paper-like surfaces |
-| Powder blue `#71d5ea` | Storefront-derived brand signal and links |
-| Custard `#f4e58d` | Highlights, stars, status, and warmth |
-| Coral `#ff806d` | Conversion emphasis and energetic accents |
-| Ube `#aa8cff` | Secondary glow and seasonal-latte cue |
+| Familiar | A real café photograph above the fold, plain-language navigation, recognizable coffeehouse materials, and direct calls to action. |
+| Classic | Serif display typography, balanced editorial composition, restrained ornament, fine rules, warm paper tones, and timeless photography. |
+| Elegant | Generous spacing, limited color, refined transitions, quiet shadows, and fewer competing interface elements. |
+| Futuristic | Transparent Three.js steam, depth-aware parallax, subtle light refraction, responsive highlights, and smooth scene transitions. |
+| Playful | A small amount of whimsy in the details, while board games and themed décor remain supporting content rather than the visual framework. |
 
-- **Display type:** Syne, for a futuristic but human headline voice.
-- **Body/UI type:** Space Grotesk and Space Mono.
-- Large rounded geometry references mugs, booth cushions, and mid-century forms.
-- Fine grids, scan lines, and status labels provide the futuristic layer.
-- Photography remains warm and real, preventing the interface from feeling synthetic.
+## 3. Evidence-to-design decisions
 
-## 5. Information architecture
+| Evidence | Design consequence |
+|---|---|
+| The café is described as bright, spring-hued, cozy, and furnished with booths, high-top seating, and books. | Use warm daylight, soft pastel accents, and editorial photography of the actual space rather than a dark synthetic world. |
+| The current site already references a real latte photograph, a storefront image, and an interior image. | Promote a real drink image into the hero and keep the storefront/interior as supporting proof. |
+| Coffee ice cubes, sweet-foam drinks, board games, and whimsical details are genuine differentiators. | Feature these as human stories and photographic details, not as “systems,” “protocols,” or game stats. |
+| The business needs directions, hours, phone pickup, and Instagram discovery. | Preserve all current conversion paths and make their labels simpler and more familiar. |
 
-1. **Hero / live status** — identity, positioning, directions, call-to-pickup, address, hours.
-2. **Signal ticker** — fast list of the café’s strongest verified differentiators.
-3. **Café lore** — linger, coffee ice cubes, and board games.
-4. **Representative menu systems** — espresso, sweet foam, tea, pastry/seasonal items.
-5. **Real-space gallery** — storefront/interior/product evidence and photography credits.
-6. **Visit module** — live map, hours, phone, address, transit-ready directions.
-7. **Evidence footer** — official social link and source acknowledgments.
+## 4. Chosen hero concept: Editorial Still Life + Living Steam
 
-## 6. Motion and Three.js plan
+### Desktop composition
 
-### Hero: Brew Reactor
+Use an asymmetric two-column layout:
 
-A lightweight Three.js scene will render:
+- **Left, 42%:** brand, open/closed status, a classic serif headline, one concise paragraph, and two plain-language actions.
+- **Right, 58%:** a tall real photograph of an actual Skip to My Brew drink in the café.
+- The photo sits in a refined frame with a thin warm-brass rule and a soft, natural shadow.
+- A transparent Three.js canvas overlays the photograph and extends slightly outside its frame.
 
-- A stylized floating coffee vessel built from primitives.
-- A reflective coffee surface and orbiting flavor particles.
-- Three animated steam trails generated from curves.
-- Two orbital rings that respond to pointer movement and scroll.
-- Warm/cool lights matching the physical storefront palette.
+Suggested headline direction:
 
-The scene supports the copy instead of blocking it. It is decorative, marked `aria-hidden`, and has a static CSS fallback.
+> **A familiar cup, with a little wonder.**
 
-### Page motion
+Suggested supporting line:
 
-- Scroll-triggered reveal for content groups using `IntersectionObserver`.
-- Slow signal marquee with duplicated content for continuity.
-- Magnetic-but-subtle primary buttons on pointer devices.
-- Image drift and perspective tilt only on capable devices.
-- A low-opacity scanning line for the system-interface feeling.
+> Espresso, sweet-foam lattes, tea, pastries, books, games, and a comfortable place to stay awhile in Montclair.
 
-### Motion accessibility
+Suggested actions:
 
-When `prefers-reduced-motion: reduce` is enabled:
+- **Get directions**
+- **Call for pickup**
 
-- The Three.js render loop stops after a single composed frame.
-- Marquee, scan, float, reveal, and magnetic effects are disabled.
-- All content remains visible and in its final position.
+### Image treatment
 
-## 7. Responsive behavior
+The preferred hero asset is a real, high-resolution image of one of the café’s drinks on a wood, stone, or café table, with recognizable interior color or light in the background. The current latte image can be used for the first prototype, but the commercial version should use an owner-provided original or an image with explicit usage permission.
 
-- **Mobile first:** one-column hero, canvas behind/above content, fixed bottom conversion dock.
-- **Tablet:** split cards and horizontally scrollable gallery.
-- **Desktop:** asymmetric two-column hero, editorial grids, cursor-reactive 3D scene.
-- Minimum 44px interactive targets and safe-area support for modern phones.
+The cup itself remains photographic. We will not rebuild it as 3D geometry.
 
-## 8. Accessibility
+### Hybrid effect
 
-- Semantic landmarks and logical heading order.
-- Visible skip link and keyboard focus states.
-- Decorative canvas excluded from the accessibility tree.
-- Real image descriptions rather than aesthetic-only alt text.
-- High-contrast text over dark surfaces; no information encoded by color alone.
-- Hours presented as text, not only as a live status color.
-- Reduced-motion and coarse-pointer adaptations.
+Three.js will add four tightly controlled effects:
 
-## 9. Performance
+1. **Steam volume** — soft translucent steam particles originate from the photographed cup and drift naturally.
+2. **Light movement** — a barely visible warm highlight travels across the image, resembling window light rather than a neon shader.
+3. **Depth parallax** — the photo, frame, steam, and caption move at slightly different rates, with a maximum displacement of roughly 6–10 pixels.
+4. **Coffee shimmer** — an optional masked highlight over the coffee surface, used only when the cup position and image crop make it convincing.
 
-- No framework runtime; plain HTML, CSS, and JavaScript.
-- Three.js is pinned and loaded as a module from a CDN.
-- Pixel ratio capped at 1.5 and rendering pauses while the hero is offscreen.
-- Images use `loading="lazy"`, explicit dimensions/aspect ratios, and remote-source fallbacks.
-- Fonts are preconnected and limited to the weights used.
-- The experience remains usable if JavaScript, Three.js, Instagram, or remote images fail.
+The result should initially register as a beautiful photograph. The motion becomes noticeable only after a moment.
 
-## 10. Search and local discovery
+## 5. Three.js redesign
 
-- Unique title and meta description with Montclair and Valley Road.
-- Canonical URL targeting the GitHub Pages deployment until a custom domain exists.
-- `CafeOrCoffeeShop` JSON-LD with address, phone, geo coordinates, hours, and social profile.
-- Open Graph/Twitter metadata.
-- Location, phone, and hours rendered as crawlable HTML.
-- Google Maps embed and direct directions link.
+### Remove
 
-## 11. Measurement plan
+- The giant procedural mug
+- Orbit rings
+- Multicolored floating spheres
+- Floor rings
+- Constant object rotation
+- HUD boxes and “online” indicators inside the visual
+- Bright cyan, purple, and coral point lights
 
-When analytics is approved, track only high-value, privacy-conscious events:
+### Keep and refine
 
-- `directions_click`
-- `pickup_call_click`
-- `instagram_click`
-- `menu_section_view`
-- `map_interaction`
+- Transparent WebGL canvas
+- Pointer response, reduced to subtle parallax
+- IntersectionObserver-based pause when off-screen
+- Device-pixel-ratio cap
+- Reduced-motion support
+- Static fallback when WebGL or the CDN fails
 
-A first-party or privacy-friendly analytics tool is preferred. No tracker is added in this implementation because consent and vendor choice are not yet defined.
+### Proposed scene structure
 
-## 12. Deployment plan
+```text
+Hero image — regular responsive <picture>
+└── Transparent Three.js overlay
+    ├── Steam particle field / custom shader
+    ├── Soft moving light texture
+    ├── Optional coffee-surface highlight mask
+    └── Subtle film-grain or dust field at very low opacity
+```
 
-- Static assets live in the repository root for direct GitHub Pages compatibility.
-- A GitHub Actions workflow publishes on every push to `main`.
-- A `.nojekyll` file prevents asset processing surprises.
-- A custom domain can later be added with `CNAME` without changing the application architecture.
+### Technical behavior
 
-## 13. Acceptance criteria
+- Three.js loads after the primary hero image so it does not delay the Largest Contentful Paint.
+- The canvas uses `pointer-events: none`; the photograph and actions remain normal HTML.
+- Steam uses a low-count `THREE.Points` system or instanced sprites with noise-driven motion.
+- No heavy post-processing pipeline is required.
+- Desktop target: smooth 60 fps on ordinary modern hardware.
+- Mobile target: reduced particle count and no cursor interaction.
+- `prefers-reduced-motion: reduce`: render one calm frame or hide the animated layer entirely.
 
-- The page works at 320px through wide desktop sizes.
-- Directions, phone, Instagram, and map links resolve to the verified business.
-- Three.js animates on capable devices and degrades safely.
-- Reduced-motion users receive a calm, fully readable version.
-- No prices, ratings, or services are invented.
-- Actual business photography is visibly credited and flagged for rights confirmation before a commercial launch.
-- GitHub Pages can deploy the repository without a build step.
+## 6. Visual system
+
+### Palette
+
+| Token | Suggested value | Role |
+|---|---:|---|
+| Porcelain | `#F5F0E8` | Main page background |
+| Warm paper | `#E9DFD0` | Secondary surfaces |
+| Espresso | `#2A1D18` | Text, footer, buttons |
+| Walnut | `#5B3B2D` | Borders, details, hover states |
+| Muted café blue | `#7EA7B2` | Brand accent derived from the storefront |
+| Sage | `#6C7866` | Secondary accent |
+| Aged brass | `#AE8A56` | Fine rules and restrained highlights |
+
+Bright neon gradients will be removed. The darkest color becomes an accent and footer color rather than the full-page environment.
+
+### Typography
+
+- **Display:** Cormorant Garamond, Libre Baskerville, or another refined serif with excellent web rendering.
+- **Body and navigation:** a neutral humanist sans such as DM Sans or Inter.
+- **Metadata:** the body sans in small caps; monospaced text is removed from primary UI.
+
+Typography should resemble a contemporary café magazine or menu, not a game console.
+
+### Shape and surface language
+
+- Smaller radii, approximately 12–24px, rather than oversized sci-fi capsules.
+- Thin hairline borders instead of glowing outlines.
+- Natural shadows with broad blur and low opacity.
+- Optional subtle paper grain, used as a CSS texture at very low contrast.
+- No scan-line overlay.
+
+## 7. Copy and vocabulary reset
+
+Replace interface metaphors with direct coffeehouse language.
+
+| Current | Replacement |
+|---|---|
+| Brew Reactor | Today at the café / remove label entirely |
+| Online | Open now |
+| Plot a course | Get directions |
+| Signal | Special / favorite / current menu |
+| Protocol | Menu / drink style |
+| Tea archive | Tea |
+| Physical portal | Inside the café |
+| Rendezvous | Visit us |
+| Coffee for this timeline | A familiar cup, with a little wonder |
+
+The café’s gaming personality will still appear in one story card or gallery caption, but it will not define every sentence.
+
+## 8. Full-page structure
+
+### 1. Header
+
+- Wordmark or simple text logo
+- Menu, Our Space, Visit, Instagram
+- Small “Open now” status
+- One clear “Get directions” action
+
+### 2. Hero
+
+- Real drink photograph
+- Three.js steam/light overlay
+- Serif headline
+- Directions and pickup actions
+- Address and hours in simple text
+
+### 3. Signature strip
+
+Replace the sci-fi ticker with a calm editorial line:
+
+> Espresso · Sweet-foam lattes · Tea · Pastries · Coffee ice cubes · Books and board games
+
+This may scroll very slowly on small screens, but should remain still on desktop.
+
+### 4. Menu highlights
+
+- Four elegant categories: Espresso, Sweet Foam, Tea, Pastries & Seasonal
+- Avoid console styling and numbered tabs
+- Use an understated tab underline or a stacked menu layout
+- Pair at least one category with a real product image
+
+### 5. The room
+
+- Large interior photo
+- Short copy about booths, books, Wi-Fi, window seating, and staying awhile
+- Small supporting detail images for games, mouse doors, handles, or other real whimsical touches
+
+### 6. Coffee ice cubes feature
+
+- Real close-up image if available
+- A brief explanation in plain language
+- Subtle animated condensation or light effect, not a game card
+
+### 7. Gallery
+
+- Storefront, interior, drink, and detail images
+- Editorial mosaic with simple captions
+- No “View / 01” or portal language
+
+### 8. Visit
+
+- Warm map treatment
+- Address, hours, phone, and directions
+- Preserve mobile quick actions
+
+### 9. Footer
+
+- Deep espresso background
+- Brand, address, hours, Instagram, and attribution/rights note
+
+## 9. Image acquisition and rights plan
+
+### Required production image set
+
+1. **Hero drink:** vertical or square, 2000px minimum on the long edge
+2. **Interior wide:** booths/counter/window light
+3. **Storefront:** full sign and entrance
+4. **Coffee ice cubes:** close detail
+5. **Atmosphere detail:** games, books, whimsical handle, or decorative element
+
+### Rules
+
+- Use the café’s own photography wherever possible.
+- Do not use unrelated stock coffee photography in the final version.
+- Do not hotlink third-party images in production.
+- Obtain owner originals or written permission before commercial launch.
+- Export local AVIF/WebP/JPEG variants with responsive crops.
+- Keep meaningful alt text and explicit image dimensions.
+
+## 10. Motion system beyond the hero
+
+Motion will become slower, shorter, and more physical:
+
+- Text reveal: 350–500ms fade and 8–12px rise
+- Images: gentle crop reveal or 1–2% scale shift
+- Buttons: underline or fill transition; remove magnetic movement
+- Cards: no 3D tilt
+- Section transitions: subtle changes in paper tone and spacing
+- Gallery: minimal parallax only on desktop
+- Map: no grid/HUD overlay
+
+No animation should compete with the drink photograph or make the page feel like a game menu.
+
+## 11. Responsive plan
+
+### Mobile
+
+- Hero photo appears first or immediately after the headline.
+- Photo uses a 4:5 crop with steam anchored to the visible cup position.
+- Three.js particle count is reduced substantially.
+- Actions remain in the existing fixed mobile dock.
+- No hover-dependent content.
+
+### Tablet
+
+- Two-column hero only when the image remains large enough to feel intentional.
+- Menu can use horizontal category tabs with a clear active underline.
+
+### Desktop
+
+- Editorial split hero with generous whitespace.
+- Three.js overlay can extend beyond the photo edge for one subtle “impossible” moment.
+
+## 12. Accessibility and performance requirements
+
+- Core content and actions work with JavaScript disabled.
+- Canvas remains decorative and excluded from the accessibility tree.
+- Minimum 44px interactive targets.
+- Strong contrast on all text and buttons.
+- Visible keyboard focus.
+- Full reduced-motion behavior.
+- Hero image target under roughly 350 KB in its primary mobile variant.
+- Three.js initializes after the hero image and pauses when not visible.
+- No layout shift from images, fonts, or canvas.
+- Target mobile LCP under 2.5 seconds on a representative 4G test.
+
+## 13. Implementation sequence
+
+### Phase 1 — Asset and composition proof
+
+- Select the hero drink photo and verify usage rights.
+- Produce one desktop and one mobile static hero mockup.
+- Lock typography, crop, palette, and copy before animation work.
+
+### Phase 2 — Global classic/elegant refresh
+
+- Replace typography and color tokens.
+- Simplify navigation, buttons, cards, labels, and section vocabulary.
+- Remove scan lines, neon glows, tilt cards, and game-console styling.
+
+### Phase 3 — Hybrid Three.js hero
+
+- Remove the procedural cup scene.
+- Build the transparent steam/light overlay.
+- Calibrate steam origin to desktop and mobile image crops.
+- Add fallbacks and reduced-motion behavior.
+
+### Phase 4 — Photography-led sections
+
+- Rebuild menu, room, coffee-ice, gallery, and visit sections around real imagery.
+- Host optimized assets locally after permission is confirmed.
+
+### Phase 5 — QA and deployment
+
+- Test 320px through wide desktop sizes.
+- Test Safari, Chrome, Firefox, and Edge.
+- Run Lighthouse and accessibility checks.
+- Verify all directions, phone, Instagram, and map interactions.
+- Deploy through the existing GitHub Pages workflow.
+
+## 14. Acceptance criteria
+
+The redesign is complete when:
+
+- A first-time visitor identifies it as a real neighborhood café within two seconds.
+- A real Skip to My Brew drink or space appears above the fold.
+- Three.js is present and memorable, but the visual still reads as photography first.
+- No orbit rings, neon particles, HUD panels, scan lines, or game-console labels remain.
+- The palette feels warm, tactile, and classic.
+- The typography feels editorial and elegant.
+- Board games and themed details are discoverable without dominating the brand.
+- Directions, hours, phone pickup, Instagram, structured data, map, and mobile quick actions remain intact.
+- The experience works without WebGL and honors reduced-motion preferences.
+- Production images are locally hosted and usage rights are documented.
+
+## 15. Proposed implementation branch
+
+Once this plan is approved, implement on:
+
+```text
+redesign/classic-elegant-threejs
+```
+
+Create a pull request with desktop and mobile screenshots before merging to `main` and redeploying GitHub Pages.
+
+## Reference sources
+
+- Current repository implementation: `Prithiraj/home-brew-cafe`, especially `index.html`, `script.js`, and `DESIGN_PLAN.md`
+- The Montclair Girl, “Skip to My Brew: Montclair’s Newest Coffee Shop on Valley Road”
+- Corner venue guide for Skip to My Brew
+- Official Instagram profile: `@skip_to_my_brew`
+
+
+## 14. Implementation record
+
+The approved direction is implemented with a photography-first hero, a transparent Three.js steam overlay, restrained pointer parallax, warm editorial typography, accessible menu tabs, real café imagery with attribution, local SVG fallbacks, and the original conversion paths preserved. The legacy synthetic mug, orbit rings, particles, HUD panels, scan lines, neon palette, magnetic controls, and game-interface vocabulary have been removed.
