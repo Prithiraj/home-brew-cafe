@@ -1,0 +1,17 @@
+{
+  "name": "Skip to My Brew",
+  "short_name": "Skip to Brew",
+  "description": "Coffee, board games, books and Wi-Fi in Montclair, New Jersey.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#130f14",
+  "theme_color": "#130f14",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
