@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Coffee cup still life</title>
+  <desc id="desc">A warm editorial illustration of a ceramic latte cup on a wooden table in soft window light.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5d9c7"/>
+      <stop offset="0.55" stop-color="#c6d5d6"/>
+      <stop offset="1" stop-color="#7ea7b2"/>
+    </linearGradient>
+    <linearGradient id="table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a644f"/>
+      <stop offset="1" stop-color="#4b3127"/>
+    </linearGradient>
+    <radialGradient id="coffee" cx="45%" cy="45%" r="62%">
+      <stop offset="0" stop-color="#b68059"/>
+      <stop offset="0.42" stop-color="#70442f"/>
+      <stop offset="1" stop-color="#2a1d18"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="900" height="1100" fill="url(#wall)"/>
+  <path d="M-60 0h420L80 760H-60z" fill="#fff8e8" opacity=".38"/>
+  <circle cx="710" cy="230" r="150" fill="#f5f0e8" opacity=".16" filter="url(#blur)"/>
+  <path d="M0 710C270 660 590 690 900 625v475H0z" fill="url(#table)"/>
+  <ellipse cx="485" cy="885" rx="260" ry="70" fill="#251915" opacity=".25" filter="url(#blur)"/>
+  <ellipse cx="480" cy="820" rx="242" ry="72" fill="#d7c7b3"/>
+  <path d="M295 565h345l-26 250c-7 69-69 115-146 115h-4c-77 0-139-46-146-115z" fill="#f4eee5"/>
+  <path d="M622 635c126-18 158 44 147 111-10 62-63 105-142 86" fill="none" stroke="#f4eee5" stroke-width="42" stroke-linecap="round"/>
+  <ellipse cx="468" cy="570" rx="173" ry="54" fill="#d9c9b8"/>
+  <ellipse cx="468" cy="572" rx="153" ry="43" fill="url(#coffee)"/>
+  <path d="M385 562c34-35 115-37 157-3-20 5-40 17-54 34-22-16-56-24-103-31z" fill="#eadac7" opacity=".9"/>
+  <path d="M407 571c30-20 78-21 111 1-14 7-27 17-38 30-19-13-43-23-73-31z" fill="#c7956f" opacity=".8"/>
+  <path d="M275 838c128 26 340 27 425-4" fill="none" stroke="#ae8a56" stroke-width="3" opacity=".5"/>
+</svg>

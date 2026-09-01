@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Warm café interior</title>
+  <desc id="desc">An editorial illustration of a bright café with a blue counter, pendant lights, and a booth.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf8f2"/>
+      <stop offset="1" stop-color="#e9dfd0"/>
+    </linearGradient>
+    <linearGradient id="counter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8db2bb"/>
+      <stop offset="1" stop-color="#557d87"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="url(#wall)"/>
+  <rect x="62" y="100" width="235" height="390" rx="8" fill="#dbe8e7"/>
+  <path d="M179 100v390M62 295h235" stroke="#fff" stroke-width="12" opacity=".75"/>
+  <path d="M62 100h235L62 490z" fill="#fff8e8" opacity=".32"/>
+  <path d="M0 650L720 565v395H0z" fill="#aa8068"/>
+  <path d="M328 405h350v310H328z" fill="url(#counter)"/>
+  <path d="M354 405h300" stroke="#f5f0e8" stroke-width="18"/>
+  <rect x="372" y="472" width="82" height="128" rx="8" fill="#315d67" opacity=".55"/>
+  <rect x="492" y="462" width="120" height="96" rx="8" fill="#f5f0e8" opacity=".42"/>
+  <path d="M375 180v170M520 160v190" stroke="#5b3b2d" stroke-width="6"/>
+  <path d="M325 350h100l-20 64h-60z" fill="#d9b28c"/>
+  <path d="M470 350h100l-20 64h-60z" fill="#7ea7b2"/>
+  <path d="M42 620h238v190H42z" fill="#6c7866"/>
+  <path d="M42 620c65-55 175-55 238 0" fill="#7e8978"/>
+  <rect x="73" y="700" width="175" height="15" rx="7" fill="#f5f0e8" opacity=".36"/>
+  <circle cx="588" cy="270" r="54" fill="#ae8a56" opacity=".2"/>
+</svg>

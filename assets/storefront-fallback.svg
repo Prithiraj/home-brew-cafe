@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Pastel coffee shop storefront</title>
+  <desc id="desc">An editorial illustration of a neighborhood coffee shop with a blue storefront and striped awning.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dce7e6"/>
+      <stop offset="1" stop-color="#f5f0e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect y="610" width="1200" height="150" fill="#b9aa96"/>
+  <rect x="120" y="125" width="960" height="520" rx="8" fill="#7ea7b2"/>
+  <rect x="170" y="250" width="310" height="350" fill="#dce9e8"/>
+  <rect x="515" y="250" width="220" height="350" fill="#e9dfd0"/>
+  <rect x="770" y="250" width="260" height="350" fill="#dce9e8"/>
+  <path d="M140 215h920l-44 86H184z" fill="#f5f0e8"/>
+  <path d="M184 215h110l-20 86h-90zm220 0h110l-6 86H388zm220 0h110l8 86H618zm220 0h110l22 86H848z" fill="#ae8a56" opacity=".72"/>
+  <text x="600" y="185" fill="#2a1d18" font-family="Georgia,serif" font-size="54" font-style="italic" text-anchor="middle">Skip to My Brew</text>
+  <circle cx="625" cy="470" r="22" fill="#ae8a56"/>
+  <path d="M210 600V250m260 350V250m340 350V250" stroke="#fff" stroke-width="10" opacity=".65"/>
+  <path d="M0 660c260-40 510-16 760-28s340-4 440 18v110H0z" fill="#8f8270" opacity=".5"/>
+</svg>
