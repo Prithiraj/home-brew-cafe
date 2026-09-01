@@ -1,0 +1,63 @@
+name: Capture classic redesign previews
+
+on:
+  push:
+    branches: ["redesign/classic-elegant-threejs"]
+    paths-ignore:
+      - "docs/screenshots/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout redesign branch
+        uses: actions/checkout@v7
+
+      - name: Start static server
+        shell: bash
+        run: |
+          python3 -m http.server 4173 >/tmp/site-server.log 2>&1 &
+          echo $! > /tmp/site-server.pid
+          sleep 2
+
+      - name: Capture desktop and mobile previews
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs/screenshots
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)"
+          "$CHROME" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --hide-scrollbars \
+            --virtual-time-budget=9000 \
+            --window-size=1440,1120 \
+            --screenshot=docs/screenshots/classic-elegant-desktop.png \
+            http://127.0.0.1:4173/
+          "$CHROME" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --hide-scrollbars \
+            --force-device-scale-factor=1 \
+            --virtual-time-budget=9000 \
+            --window-size=390,844 \
+            --screenshot=docs/screenshots/classic-elegant-mobile.png \
+            http://127.0.0.1:4173/
+
+      - name: Commit previews to the redesign branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/screenshots
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: add classic redesign previews"
+            git push origin HEAD:redesign/classic-elegant-threejs
+          fi
