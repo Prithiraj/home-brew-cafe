@@ -27,7 +27,12 @@ jobs:
           rm -rf /tmp/redesign
           mkdir -p /tmp/redesign
           unzip -q /tmp/redesign.zip -d /tmp/redesign
-          rsync -a --delete --exclude=".git/" --exclude=".gitignore" /tmp/redesign/home-brew-cafe/ ./
+          rsync -a --delete \
+            --exclude=".git/" \
+            --exclude=".gitignore" \
+            --exclude=".github/workflows/" \
+            /tmp/redesign/home-brew-cafe/ ./
+          rm -rf .deploy
 
       - name: Commit restored redesign
         shell: bash
